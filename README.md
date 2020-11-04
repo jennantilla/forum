@@ -20,6 +20,7 @@ This app was built with Ruby 2.7 & Rails 6.0.3. Both will be required to be inst
 1. From the command line, set up a new directory on your machine:
 
     ```$ mkdir forum```
+    
     ```$ cd forum```
 
 2. Clone the github repository
