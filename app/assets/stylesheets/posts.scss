@@ -1,0 +1,34 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+table {
+    width: 65%;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    width: 50%;
+}
+
+.post {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 15px;
+}
+
+.comment {
+    border: 1px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.commenter {
+    color: blue;
+}

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @post.title %></h2>
+<h3><%= @post.author %> on <%= @post.created_at.to_date %></h3>
+
+<p>
+  <%= @post.content %>
+</p>
+
+<p>
+  <% if @post.image.attached? %>
+    <img src="<%=(url_for(@post.image))%>">
+  <% end %>
+</p>
+
+<h4>Comments</h4>
+<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+  
+  <div class="comment">
+    <p><%= form.text_field :commenter, :required => true, :placeholder => "Name" %></p>
+    <p><%= form.text_area :body, :required => true, :placeholder => "Comment" %></p>
+    <p><%= form.submit %></p>
+  </div>
+<% end %>
+
+<% @post.comments.each do |comment| %>
+  <p class="commenter"><%= comment.commenter %> | <%= comment.created_at %></p>
+  <p><em><%= comment.body %></em></p>
+<% end %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
