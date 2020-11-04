@@ -14,19 +14,17 @@ Future iterations of this app might include:
 * Additional testing
 
 ## Prerequisites
-..* This app was build with Ruby 2.7.2p137 & Rails 6.0.3.4
+This app was built with Ruby 2.7.2p137 & Rails 6.0.3.4. Both will be required to be installed.
 
-### Getting Rails up and Running
-1. If you don't have Rails, install in at your command prompt
-
-    $ gem install rails
-
-2. Create a new Rails application:
-
-    $ rails new forumfun
-
-3. Change directory to myapp and start the web server:
-
-    $ cd myapp
-
-4. Run your server by navingating your browser to [http://localhost:3000]http://localhost:3000
+## Setting up the app and database
+1. From the command line, set up a new directory on your marchine
+  $ mkdir forum
+  $ cd forum
+2. Clone the github repository
+$ git clone https://github.com/jennantilla/forum.git
+3. Create and setup the database
+  $ bundle exec rake db:create
+  $ bundle exec rake db:setup
+4. Run the Rails server
+  $ rails server 
+5. Navigate your browser to [http://localhost:3000](http://localhost:3000) to view the app
